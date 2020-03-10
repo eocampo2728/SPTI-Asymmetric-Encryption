@@ -37,6 +37,5 @@ def main():
 
     IO.generateFile(decrypted_mess, output)
 
-main()   
 
 

@@ -1,29 +1,31 @@
+
+import encrypt
+import decrypt
+import GenerateKeys
+
 def menu():
-        print("---------- Menu Laboratorio Seguridad Informatica 2020-I ----------")
-        print ("\t1 - Generate a key public and private")
-        print ("\t2 - View the key pulic and private")
-        print ("\t3 - Encrypt a file")
-        print ("\t4 - Decrypt a file")
-        print ("\t5 - Exit")
+
+        print ("1 - Generate a key public and private")
+        print ("2 - Encrypt a file")
+        print ("3 - Decrypt a file")
+        print ("4 - Exit")
         
 while True:
         menu()
-        opcionMenu = input("Choose an option: >> ")
+        
+        opcionMenu = raw_input("Choose an option: >> ").strip()
  
         if opcionMenu=="1":
-                print ("")
-                input("Has pulsado la opción 1...\npulsa una tecla para continuar")
+                GenerateKeys.main()
+                
         elif opcionMenu=="2":
-                print ("")
-                input("Has pulsado la opción 2...\npulsa una tecla para continuar")
+                encrypt.main()
+
         elif opcionMenu=="3":
-                print ("")
-                input("Has pulsado la opción 3...\npulsa una tecla para continuar")
+                decrypt.main()
+
         elif opcionMenu=="4":
-                print("")
-                input("Has pulsado la opción 4...\npulsa una tecla para continuar")
-        elif opcionMenu=="5":
                 break
         else:
                 print ("")
-                input("No has pulsado ninguna opción correcta...\npulsa una tecla para continuar")
+                raw_input("No has pulsado ninguna opcion correcta...\npulsa una tecla para continuar")

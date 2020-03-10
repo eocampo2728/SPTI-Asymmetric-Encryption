@@ -29,14 +29,12 @@ def exportKeys(pik, puk):
 
     IO.generateFile(pik, 'files/keys/privateKey.pem')
     IO.generateFile(puk, 'files/keys/publicKey.pem')
+    print("Both keys were saved at files/keys directory")
 
-    print(pik)
-    print(puk)
 
 def main():
     keySize=int(raw_input("Enter key size (>=2048): "))
     keyGenerator(keySize)
 
-main()
 
 

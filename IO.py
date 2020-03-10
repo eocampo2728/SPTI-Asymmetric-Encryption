@@ -8,7 +8,6 @@ def generateFile(texto, nameFile):
 def readText(textFile):
     f = open(textFile, 'rb')
     message = f.read()
-    print(message)
     f.close()
     return message
 
