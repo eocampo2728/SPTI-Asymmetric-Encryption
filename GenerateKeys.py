@@ -35,3 +35,5 @@ def exportKeys(pik, puk):
     print(pik)
     print(puk)
 
+
+keyGenerator(2048)
