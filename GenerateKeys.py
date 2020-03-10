@@ -1,3 +1,4 @@
+import IO
 from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives.asymmetric import rsa
 from cryptography.hazmat.primitives import serialization
@@ -26,14 +27,16 @@ def keyGenerator(keySize):
 
 def exportKeys(pik, puk):
 
-    with open('privateKey.pem', 'wb') as f:
-        f.write(pik)
-        
-    with open('publicKey.pem', 'wb') as f:
-        f.write(puk)
+    IO.generateFile(pik, 'files/keys/privateKey.pem')
+    IO.generateFile(puk, 'files/keys/publicKey.pem')
 
     print(pik)
     print(puk)
 
+def main():
+    keySize=int(raw_input("Enter key size (>=2048): "))
+    keyGenerator(keySize)
 
-keyGenerator(2048)
+main()
+
+
