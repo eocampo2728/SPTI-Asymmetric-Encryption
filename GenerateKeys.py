@@ -43,8 +43,7 @@ def exportKeys(pik, puk):
     IO.generateFile(puk, 'files/keys/publicKey.pem')
 
 
-def main():
-    keySize=int(raw_input("Enter key size (>=2048): "))
+def main(keySize):
     keyGenerator(keySize)
 
 

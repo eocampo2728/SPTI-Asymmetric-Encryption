@@ -35,12 +35,10 @@ def decrypt(encrypted, private_key):
 
 
 def main():
-    message=IO.readText(raw_input("Enter file text to decrypt: "))
-    privateKey=getPrivateKey(raw_input("Enter privateKey file: "))
-    output=raw_input("Enter file destination of decrypted text: ")
-    output=output.strip()
-    if(output==""):
-        output="files/decrypted.txt"
+    message=IO.readFromSys()
+    privateKey=getPrivateKey("files/keys/privateKey.pem")
+    output="files/decrypted.txt"
+    
 
     decrypted_mess=decrypt(message,privateKey)
 
