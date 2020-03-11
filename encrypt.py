@@ -43,6 +43,8 @@ def main():
     encrypted_mess=encrypt(message,publicKey)
     IO.generateFile(encrypted_mess, output)
 
+    return output
+
 
 
 

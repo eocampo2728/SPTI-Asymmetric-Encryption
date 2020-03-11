@@ -45,6 +45,7 @@ def exportKeys(pik, puk):
 
 def main(keySize):
     keyGenerator(keySize)
+    return "files/keys"
 
 
 

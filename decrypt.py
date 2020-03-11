@@ -37,12 +37,13 @@ def decrypt(encrypted, private_key):
 def main():
     message=IO.readFromSys()
     privateKey=getPrivateKey("files/keys/privateKey.pem")
-    output="files/decrypted.txt"
-    
+    output="files/decrypted.txt"    
 
     decrypted_mess=decrypt(message,privateKey)
 
     IO.generateFile(decrypted_mess, output)
+    
+    return output
 
 
 
