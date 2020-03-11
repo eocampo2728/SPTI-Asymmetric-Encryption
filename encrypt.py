@@ -35,15 +35,12 @@ def encrypt(message, public_key):
 
 def main():
 
-    message=IO.readText(raw_input("Enter file text to encrypt: "))
-    publicKey=getPublicKey(raw_input("Enter publicKey file: "))
-    output=raw_input("Enter file destination of encrypted text: ")
-    output=output.strip()
-    if(output==""):
-        output="files/encrypted.txt"
-
+    message=IO.readFromSys()
+    print(message)
+    publicKey=getPublicKey("files/keys/publicKey.pem")
+    output="files/encrypted.txt"
+    
     encrypted_mess=encrypt(message,publicKey)
-
     IO.generateFile(encrypted_mess, output)
 
 

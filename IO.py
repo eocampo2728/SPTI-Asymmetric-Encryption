@@ -1,4 +1,9 @@
+# -*- coding: utf-8 -*-
+from Tkinter import *
+import Tkinter, Tkconstants, tkFileDialog
 import os
+import sys
+
 
 """
     Method to save a text in a given file
@@ -19,5 +24,20 @@ def readText(textFile):
     message = f.read()
     f.close()
     return message
+
+def readFromSys():
+    nombrearch=tkFileDialog.askopenfilename(initialdir = "/",title = "Select file",filetypes = (("txt files","*.txt"),("todos los archivos","*.*")))
+    if nombrearch!='':
+        """Aquí tenemos la variable del archivo"""
+        archi1=open(nombrearch, "rb")
+        contenido=archi1.read()
+        archi1.close()
+        print(contenido)
+        return contenido
+    return ""
+
+
+
+
 
 
