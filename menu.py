@@ -4,7 +4,7 @@ import decrypt
 import GenerateKeys
 
 def menu():
-
+        print("---------------------- Menu --------------------------")
         print ("1 - Generate a key public and private")
         print ("2 - Encrypt a file")
         print ("3 - Decrypt a file")
@@ -28,4 +28,4 @@ while True:
                 break
         else:
                 print ("")
-                raw_input("No has pulsado ninguna opcion correcta...\npulsa una tecla para continuar")
+                raw_input("You have not pressed any correct option...\npress a key to continue ")
