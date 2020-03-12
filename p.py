@@ -29,15 +29,21 @@ def start():
                         borderwidth = '3', background="white") 
 
     botonKeys = Button(root, text="Generate keys", command=genKeys)
-    boton = Button(root, text="Select your file to encrypt", command=funEnc)
-    botonDec = Button(root, text="Select your file to decrypt", command=funDec)
+    boton = Button(root, text="Select a file to encrypt", command=funEnc)
+    botonDec = Button(root, text="Select a file to decrypt", command=funDec)
+    space1 = Label(root, text= "")
+    space2 = Label(root, text= "")
+    space3 = Label(root, text= "")
 
     root.geometry('380x300')
-    root.title("Ventana")
+    root.title("Asymmetric Encryption and Decryption")
 
-    botonKeys.grid(row = 0, column = 3, padx = 65)
-    boton.grid(row = 1, column = 3, padx = 65)
-    botonDec.grid(row = 2, column = 3, padx = 65)
+    space1.grid(row = 0, column = 3, padx = 65)
+    botonKeys.grid(row = 1, column = 3, padx = 75)
+    space2.grid(row = 2, column = 3, padx = 65)
+    boton.grid(row = 3, column = 3, padx = 75)
+    space3.grid(row = 4, column = 3, padx = 65)
+    botonDec.grid(row = 5, column = 3, padx = 75)
 
     root.mainloop()
 
